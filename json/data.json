@@ -1,0 +1,12 @@
+{
+  "id": 1345,
+  "course": "Testing",
+  "teacherName": "Chester Ronald",
+  "students": [
+    { "name": "Juan", "lastname": "Golang", "age": 23 },
+    { "name": "Rita", "lastname": "Csharp", "age": 30 },
+    { "name": "Kowalski", "lastname": "Perl", "age": 20 },
+    { "name": "Giannina", "lastname": "Lambda", "age": 26 },
+    { "name": "Mar", "lastname": "Cobol", "age": 29 }
+  ]
+}
