@@ -17,5 +17,22 @@ function showData(dataArray) {
     container.innerHTML += `<p> ${item.name} ${item.lastname} </p>`; // Se concatena cada párrafo de la manera que queremos mostrarlo al innerHTML del contenedor
   }
 }
+function fetchData() {
+  fetch(DATA_URL) // Realiza la solicitud fetch al archivo JSON
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json(); // Convierte la respuesta a JSON
+    })
+    .then(data => {
+      // Llama a la función showData con el array de estudiantes
+      showData(data.students);
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+}
 
 // Escribe el código necesario para realizar el fetch al archivo con los datos y mostrar los estudiantes con la función showData
+fetchData();
